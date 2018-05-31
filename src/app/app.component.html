@@ -1,0 +1,117 @@
+<div>
+  <mat-toolbar color="primary">
+    <span><mat-icon>mood</mat-icon></span>
+
+    <span>Yay, Material in Angular 2!</span>
+
+    <button mat-icon-button [mat-menu-trigger-for]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+  </mat-toolbar>
+  <mat-menu x-position="before" #menu="matMenu">
+    <button mat-menu-item>Option 1</button>
+    <button mat-menu-item>Option 2</button>
+  </mat-menu>
+
+  <mat-card>
+    <button mat-button>All</button>
+    <button mat-raised-button>Of</button>
+    <button mat-raised-button color="primary">The</button>
+    <button mat-raised-button color="accent">Buttons</button>
+  </mat-card>
+
+  <span class="done">
+    <button mat-fab>
+      <mat-icon>check circle</mat-icon>
+    </button>
+  </span>
+</div>
+<mat-card>
+  <mat-card-header>
+    <img mat-card-avatar src="https://source.unsplash.com/random/200x200">
+    <mat-card-title>Cards are the best</mat-card-title>
+    <mat-card-subtitle>Really, they are!</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://source.unsplash.com/random/800x600">
+  <mat-card-content>
+    <p>Something pretty...</p>
+  </mat-card-content>
+</mat-card>
+<mat-card>
+  <mat-grid-list cols="3">
+   <mat-grid-tile [style.border-right]="'1px dashed #ddd'">
+     John
+   </mat-grid-tile>
+   <mat-grid-tile [style.border-right]="'1px dashed #ddd'">
+     Paul
+   </mat-grid-tile>
+   <mat-grid-tile>
+     Ringo
+   </mat-grid-tile>
+  </mat-grid-list>
+</mat-card>
+<div class="demo-grid-list">
+  <mat-card>
+    <mat-card-title>Grid list with footer</mat-card-title>
+    <mat-card-content>
+      <mat-grid-list cols="4" rowHeight="200px">
+        <mat-grid-tile *ngFor="let dog of dogs; let i = index">
+          <img [alt]="dog.name" src="https://material.angularjs.org/material2_assets/ngconf/{{dog.name}}.png">
+          <mat-grid-tile-footer>
+            <h3 mat-line>{{dog.name}}</h3>
+            <span mat-line>Human: {{dog.human}}</span>
+            <!-- <mat-icon>star_border</mat-icon> -->
+            <button md-button (click)="navigatetodetails(i)">
+              <i class="material-icons md-18">details</i>
+          </button>
+          </mat-grid-tile-footer>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-content>
+  </mat-card>
+</div>
+<div class="demo-grid-list">
+<mat-grid-list cols="4"  rowHeight="515px" gutterSize="0px">
+  <mat-grid-tile  *ngFor="let dog of dogs; let j = index">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <img mat-card-avatar src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+<mat-card>
+  <mat-card-header>
+    <img mat-card-avatar src="https://source.unsplash.com/random/200x200">
+    <mat-card-title>Cards are the best</mat-card-title>
+    <mat-card-subtitle>Really, they are!</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://source.unsplash.com/random/800x600">
+  <mat-card-content>
+    <p>HTML5 is the next major revision of the HTML standard superseding HTML 4.01,
+      XHTML 1.0, and XHTML 1.1. HTML5 is a standard for structuring and presenting 
+      content on the World Wide Web.</p>
+      
+      <p>HTML5 is a cooperation between the World Wide Web Consortium (W3C) and the
+      Web Hypertext Application Technology Working Group (WHATWG).</p>
+      
+      <p>The new standard incorporates features like video playback and 
+      drag-and-drop that have been previously dependent on third-party browser
+      plug-ins such as Adobe Flash, Microsoft Silverlight, and Google Gears.</p>
+  </mat-card-content>
+</mat-card>
+</div>
